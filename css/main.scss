@@ -9,13 +9,22 @@
 
 $fontFamily:'Open Sans', sans-serif;
 
-body,h1,h2,h3,h4,h5,h6{
+$sizeSmartPhone:719px; // Mobile devices (breakpoint set at max 719px width)
+$sizeSmallScreen:980px; // Tablet devices (breakpoint set at max 980px width)
+$sizeNormalScreen:1140px; // Desktop devices (breakpoint set at max 1140px width)
+//$sizeBigScreen : bigger then normalscreen -> HD
+
+
+body,section{
   font-family:$fontFamily ;
   font-weight: 400;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 h1,h2,h3,h4,h5,h6{
-  
+  font-family:$fontFamily ;
+  font-weight: 700;
 }
 
 
@@ -26,8 +35,13 @@ header{
     font-size: 3em;
     color: #333333;
     padding: 1em;
+    line-height: 1em;
     a{
         color: #333333;    
+    }
+    @media only screen and (max-width: $sizeSmartPhone + 1) {
+      font-size: 2em;
+      // margin-bottom: 0.5em;
     }
 }
 a{
@@ -43,7 +57,7 @@ footer{
 }
 
 iframe{ // gmap
-    margin: 0em;
+    // margin: 0em;
     height: 250px;
     width: 100%;
     // @media only screen AND (max-width: $sizeSmartPhone) {
@@ -53,5 +67,19 @@ iframe{ // gmap
 
 #who{
     text-align: center;
-    padding: 1em;
+    padding: 0.7em;
+}
+
+.portret{
+  img{
+    @media only screen and (max-width: 769px) { 
+        width: 100%;
+    }
+    @media only screen and (min-width: 769px) { 
+      // width: 300px;
+      float: right;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
 }
