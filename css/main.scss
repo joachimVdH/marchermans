@@ -44,11 +44,17 @@ header{
         padding-top: 0.4em;
     }
     @media only screen and (max-width: $sizeSmartPhone + 1) {
-      font-size: 0.9em;
-      // margin-bottom: 0.5em;
+      font-size: 1.0em;
       a{
           color: #333333;  
           padding-top: 0.8em;
+      }
+    }
+    @media only screen and (min-width: $sizeSmartPhone + 2) and (max-width: $sizeNormalScreen + 1) {
+      font-size: 1.9em;
+      a{
+          color: #333333;  
+          // padding-top: 0.6em;
       }
     }
 }
